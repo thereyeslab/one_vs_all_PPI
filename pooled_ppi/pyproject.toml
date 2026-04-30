@@ -1,0 +1,40 @@
+[project]
+name = "pooled-ppi"
+version = "26.0-dev"
+description = "Computational screening of protein-protein interactions using pooled co-folding"
+readme = "README.md"
+authors = [
+    { name = "jurgjn", email = "jurgjn@users.noreply.github.com" }
+]
+requires-python = ">=3.10"
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+]
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+    "af3io",
+    "biopython",
+    "cached-path",
+    "foldcomp",
+    "matplotlib",
+    "numba",
+    "pandas",
+    "seaborn",
+    "scipy",
+    "tqdm",
+    "snakemake",
+]
+
+[project.scripts]
+pooled-ppi-sample = "pooled_ppi.sample_pools:main"
+
+[project.urls]
+Homepage = "https://github.com/jurgjn/pooled-ppi"
+Issues = "https://github.com/jurgjn/pooled-ppi/issues"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
