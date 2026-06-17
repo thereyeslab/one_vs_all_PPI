@@ -1,0 +1,29 @@
+name: pooled_ppi
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - pip
+
+  # Core data processing
+  - numpy
+  - pandas
+  - scipy
+  - pyyaml
+  - biopython
+
+  # Plotting / analysis
+  - matplotlib
+  - seaborn
+  - statsmodels
+  - tqdm
+
+  # Optional acceleration
+  - numba
+
+  # Optional pip-only packages
+  - pip:
+      - af3io
