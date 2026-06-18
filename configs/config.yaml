@@ -88,7 +88,7 @@ size_correction:
   root_to_use: 0.5
   type_of_correction: subtract
 
-  # pooled-ppi approximate averages from mgen + yeast
+
   fixed_intercept: 0.04
   fixed_slope: 0.0044
 
