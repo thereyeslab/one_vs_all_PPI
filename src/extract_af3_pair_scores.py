@@ -68,7 +68,7 @@ def infer_pool_name_from_summary_name(name: str) -> str:
     #ste_without_fold = stem.replace("fold_", "")
     #pool_name = re.sub(r"_summary_confidences_.*\.json$", "", ste_without_fold)
     # pool name is the first part of the filename that matches "pool_XXXXX" or "fold_pool_XXXXX"
-    match = re.search(r"(fold_)?pool_\d+", stem)
+    match = re.search(r"pool_\d+", stem)
     if not match:
         raise ValueError(f"Could not infer pool name from summary JSON filename: {name}")
 
