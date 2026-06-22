@@ -23,3 +23,5 @@ env/
 data/
 
 src/__pycache__
+
+results/
