@@ -77,13 +77,7 @@ Final ranked interaction table
 
 Depending on the biological question, proteins may be filtered before screening. This reduces computational cost and focuses the analysis on proteins more likely to participate in soluble protein-protein interactions.
 
-The provided filtering script currently supports removal of:
-
-- Ribosomal proteins
-- Membrane proteins
-- Outer membrane and cell wall synthesis proteins
-- Periplasmic proteins
-
+The provided filtering script currently supports removal of proteins based on the configured keywords (filters) in the uniprot annotations file. 
 The filtering workflow uses:
 
 Proteome FASTA
@@ -99,10 +93,11 @@ and generates:
 
 The excluded protein table records the reason(s) each protein was removed, allowing easy quality control and review.
 
-Additional filtering rules can be added by implementing new filtering functions.
 
 
 Running the filtering step
+First, configure the configs/proteome_filtering_config.yaml
+Then: 
 ```
 python src/seq_filtering/filter_proteins.py
 ```
